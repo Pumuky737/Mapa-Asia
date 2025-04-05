@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>MAPA INTERACTIU D’ASIA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 800px;
+      background-image: url('ASIA.jpg');
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      border: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      position: absolute;
+      width: 150px;
+      padding: 4px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      margin: 5px;
+    }
+
+    .respuesta-correcta {
+      position: absolute;
+      left: 170px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Posiciones de los cuadros */
+    #campo1 { top: 10px; left: 10px; }
+    #resp1 { top: 10px; }
+    #campo2 { top: 40px; left: 10px; }
+    #resp2 { top: 40px; }
+    #campo3 { top: 70px; left: 10px; }
+    #resp3 { top: 70px; }
+    #campo4 { top: 100px; left: 10px; }
+    #resp4 { top: 100px; }
+    #campo5 { top: 130px; left: 10px; }
+    #resp5 { top: 130px; }
+    #campo6 { top: 160px; left: 10px; }
+    #resp6 { top: 160px; }
+    #campo7 { top: 190px; left: 10px; }
+    #resp7 { top: 190px; }
+    #campo8 { top: 220px; left: 10px; }
+    #resp8 { top: 220px; }
+    #campo9 { top: 250px; left: 10px; }
+    #resp9 { top: 250px; }
+    #campo10 { top: 280px; left: 10px; }
+    #resp10 { top: 280px; }
+    #campo11 { top: 310px; left: 10px; }
+    #resp11 { top: 310px; }
+    #campo12 { top: 340px; left: 10px; }
+    #resp12 { top: 340px; }
+    #campo13 { top: 370px; left: 10px; }
+    #resp13 { top: 370px; }
+    #campo14 { top: 400px; left: 10px; }
+    #resp14 { top: 400px; }
+ #campo15 { top: 430px; left: 10px; }
+    #resp15 { top: 430px; }
+    #campo16 { top: 460px; left: 10px; }
+    #resp16 { top: 460px; }
+    #campo17 { top: 490px; left: 10px; }
+    #resp17 { top: 490px; }
+    #campo18 { top: 520px; left: 10px; }
+    #resp18 { top: 520px; }
+    #campo19 { top: 550px; left: 10px; }
+    #resp19 { top: 550px; }
+    #campo20 { top: 580px; left: 10px; }
+    #resp20 { top: 580px; }
+    #campo21 { top: 610px; left: 10px; }
+    #resp21 { top: 610px; }
+    #campo22 { top: 640px; left: 10px; }
+    #resp22 { top: 640px; }
+    #campo23 { top: 670px; left: 10px; }
+    #resp23 { top: 670px; }
+    #campo24 { top: 700px; left: 10px; }
+    #resp24 { top: 700px; }
+    #campo25 { top: 730px; left: 10px; }
+    #resp25 { top: 730px; }
+
+
+    .map-number {
+      position: absolute;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 50%;
+    }
+
+    .correcto {
+      border-color: green;
+      background-color: #d4edda;
+    }
+    .incorrecto {
+      border-color: red;
+      background-color: #f8d7da;
+    }
+    .texto-verde { color: green; }
+    .texto-rojo { color: red; }
+  </style>
+</head>
+<body>
+  <h2>MAPA INTERACTIU D’ASIA</h2>
+
+  <div class="map-container">
+    <div class="map-number" style="top: 10px; left: 600px;">1</div>
+    <div class="map-number" style="top: 100px; left: 550px;">2</div>
+    <div class="map-number" style="top: 190px; left: 380px;">3</div>
+    <div class="map-number" style="top: 350px; left: 380px;">4</div>
+    <div class="map-number" style="top: 450px; left: 300px;">5</div>
+    <div class="map-number" style="top: 100px; left: 900px;">6</div>
+    <div class="map-number" style="top: 530px; left: 650px;">7</div>
+    <div class="map-number" style="top: 200px; left: 440px;">8</div>
+    <div class="map-number" style="top: 360px; left: 630px;">9</div>
+    <div class="map-number" style="top: 390px; left: 660px;">10</div>
+    <div class="map-number" style="top: 630px; left: 780px;">11</div>
+    <div class="map-number" style="top: 730px; left: 870px;">12</div>
+    <div class="map-number" style="top: 770px; left: 1050px;">13</div>
+    <div class="map-number" style="top: 550px; left: 820px;">14</div>
+    <div class="map-number" style="top: 330px; left: 990px;">15</div>
+    <div class="map-number" style="top: 300px; left: 1030px;">16</div>
+    <div class="map-number" style="top: 300px; left: 820px;">17</div>
+    <div class="map-number" style="top: 5px; left: 1100px;">18</div>
+    <div class="map-number" style="top: 140px; left: 1100px;">19</div>
+    <div class="map-number" style="top: 300px; left: 340px;">20</div>
+    <div class="map-number" style="top: 320px; left: 310px;">21</div>
+    <div class="map-number" style="top: 440px; left: 600px;">22</div>
+    <div class="map-number" style="top: 140px; left: 450px;">23</div>
+    <div class="map-number" style="top: 150px; left: 480px;">24</div>
+    <div class="map-number" style="top: 320px; left: 250px;">25</div>
+
+
+    <input type="text" id="campo1" class="input-box" placeholder="1">
+    <div id="resp1" class="respuesta-correcta"></div>
+    <input type="text" id="campo2" class="input-box" placeholder="2">
+    <div id="resp2" class="respuesta-correcta"></div>
+    <input type="text" id="campo3" class="input-box" placeholder="3">
+    <div id="resp3" class="respuesta-correcta"></div>
+    <input type="text" id="campo4" class="input-box" placeholder="4">
+    <div id="resp4" class="respuesta-correcta"></div>
+    <input type="text" id="campo5" class="input-box" placeholder="5">
+    <div id="resp5" class="respuesta-correcta"></div>
+    <input type="text" id="campo6" class="input-box" placeholder="6">
+    <div id="resp6" class="respuesta-correcta"></div>
+    <input type="text" id="campo7" class="input-box" placeholder="7">
+    <div id="resp7" class="respuesta-correcta"></div>
+    <input type="text" id="campo8" class="input-box" placeholder="8">
+    <div id="resp8" class="respuesta-correcta"></div>
+    <input type="text" id="campo9" class="input-box" placeholder="9">
+    <div id="resp9" class="respuesta-correcta"></div>
+    <input type="text" id="campo10" class="input-box" placeholder="10">
+    <div id="resp10" class="respuesta-correcta"></div>
+    <input type="text" id="campo11" class="input-box" placeholder="11">
+    <div id="resp11" class="respuesta-correcta"></div>
+    <input type="text" id="campo12" class="input-box" placeholder="12">
+    <div id="resp12" class="respuesta-correcta"></div>
+    <input type="text" id="campo13" class="input-box" placeholder="13">
+    <div id="resp13" class="respuesta-correcta"></div>
+    <input type="text" id="campo14" class="input-box" placeholder="14">
+    <div id="resp14" class="respuesta-correcta"></div>
+    <input type="text" id="campo15" class="input-box" placeholder="15">
+    <div id="resp15" class="respuesta-correcta"></div>
+    <input type="text" id="campo16" class="input-box" placeholder="16">
+    <div id="resp16" class="respuesta-correcta"></div>
+    <input type="text" id="campo17" class="input-box" placeholder="17">
+    <div id="resp17" class="respuesta-correcta"></div>
+    <input type="text" id="campo18" class="input-box" placeholder="18">
+    <div id="resp18" class="respuesta-correcta"></div>
+    <input type="text" id="campo19" class="input-box" placeholder="19">
+    <div id="resp19" class="respuesta-correcta"></div>
+    <input type="text" id="campo20" class="input-box" placeholder="20">
+    <div id="resp20" class="respuesta-correcta"></div>
+    <input type="text" id="campo21" class="input-box" placeholder="21">
+    <div id="resp21" class="respuesta-correcta"></div>
+    <input type="text" id="campo22" class="input-box" placeholder="22">
+    <div id="resp22" class="respuesta-correcta"></div>
+    <input type="text" id="campo23" class="input-box" placeholder="23">
+    <div id="resp23" class="respuesta-correcta"></div>
+    <input type="text" id="campo24" class="input-box" placeholder="24">
+    <div id="resp24" class="respuesta-correcta"></div>
+    <input type="text" id="campo25" class="input-box" placeholder="25">
+    <div id="resp25" class="respuesta-correcta"></div>
+
+
+  </div>
+
+  <div style="display: flex; gap: 10px; margin-top: 10px;">
+  <button onclick="corregir()">CORREGIR</button>
+  <button onclick="resetear()">INTÉNTALO DE NUEVO!!</button>
+</div>
+
+
+  <script>
+    const respuestas = {
+campo1: "Oceà Glacial Àrtic",
+campo2: "Serralada dels Urals",
+campo3: "Caucas",
+campo4: "Serralada dels Zagros",
+campo5: "Península d’Aràbia",
+campo6: "Sibèria",
+campo7: "Golf de Bengala",
+campo8: "Mar Càspia",
+campo9: "Himàlaia",
+campo10: "Everest",
+campo11: "Península de Malacca",
+campo12: "Mar de Java",
+campo13: "Mar de Timor",
+campo14: "Península d’Indoxina",
+campo15: "Península de Corea",
+campo16: "Mar del Japó",
+campo17: "Desert del Gobi",
+campo18: "Estret de Bering",
+campo19: "Península de Kamtxatka",
+campo20: "Riu Tigris",
+campo21: "Riu Eufrates",
+campo22: "Riu Ganges",
+campo23: "Riu Volga",
+campo24: "Riu Ural",
+campo25: "Mar Morta"
+    };
+
+    function corregir() {
+      for (let campo in respuestas) {
+        const input = document.getElementById(campo);
+        const valorUsuario = input.value.trim().toLowerCase();
+        const valorCorrecto = respuestas[campo].toLowerCase();
+        const numero = campo.replace("campo", "");
+const respuestaDiv = document.getElementById("resp" + numero);
+
+
+        if (valorUsuario === valorCorrecto) {
+          input.classList.add("correcto");
+          input.classList.remove("incorrecto");
+          respuestaDiv.textContent = "✔ " + respuestas[campo];
+          respuestaDiv.className = "respuesta-correcta texto-verde";
+        } else {
+          input.classList.add("incorrecto");
+          input.classList.remove("correcto");
+          respuestaDiv.textContent = "✘ " + respuestas[campo];
+          respuestaDiv.className = "respuesta-correcta texto-rojo";
+      }
+      }
+    }
+function resetear() {
+  for (let i = 1; i <= 25; i++) {
+    const input = document.getElementById("campo" + i);
+    const respuestaDiv = document.getElementById("resp" + i);
+
+    if (input) {
+      input.value = "";
+      input.classList.remove("correcto", "incorrecto");
+    }
+
+    if (respuestaDiv) {
+      respuestaDiv.textContent = "";
+      respuestaDiv.className = "respuesta-correcta";
+    }
+  }
+}
+  
+  </script>
+</body>
+</html>
